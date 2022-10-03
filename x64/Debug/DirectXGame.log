@@ -1,13 +1,5 @@
-﻿  compilation object save succeeded; see C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\BasicPixelShader.cso
-  compilation object save succeeded; see C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\BasicVertexShader.cso
-  compilation object save succeeded; see C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\SpritePixelShader.cso
-  compilation object save succeeded; see C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\SpriteVertexShader.cso
-  DebugText.cpp
-  DirectXCommon.cpp
+﻿  DebugText.cpp
   GameScene.cpp
-  Input.cpp
-  main.cpp
-  Object3d.cpp
   Sprite.cpp
-  WinApp.cpp
-  DirectXGame.vcxproj -> C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\DirectXGame.exe
+  main.cpp
+  DirectXGame.vcxproj -> C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\DirectXGame.exe

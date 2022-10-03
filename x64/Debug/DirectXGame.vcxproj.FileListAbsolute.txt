@@ -1,1 +1,2 @@
 C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\DirectXGame.exe
+C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\DirectXGame.exe

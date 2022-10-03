@@ -2,21 +2,21 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\DirectXGame.exe</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\DirectXGame.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\BasicPixelShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\BasicPixelShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\BasicVertexShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\BasicVertexShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\SpritePixelShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\SpritePixelShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\ドキュメント\AL4_CG3_Start\AL4_CG3_Start\DirectXGame\x64\Debug\SpriteVertexShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\SpriteVertexShader.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
