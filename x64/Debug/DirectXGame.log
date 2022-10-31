@@ -1,5 +1,2 @@
-﻿  DebugText.cpp
-  GameScene.cpp
-  Sprite.cpp
-  main.cpp
-  DirectXGame.vcxproj -> C:\Users\junju\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\DirectXGame.exe
+﻿  Object3d.cpp
+  DirectXGame.vcxproj -> C:\Users\junju\OneDrive\デスクトップ\大森\DirectXGame\x64\Debug\DirectXGame.exe
