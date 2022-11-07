@@ -25,6 +25,12 @@ class ParticleManager
 		int frame = 0;
 		//終了フレーム
 		int num_frame = 0;
+		//スケール
+		float scale = 1.0f;
+		//初期値
+		float s_scale = 1.0f;
+		//最終値
+		float e_scale = 0.0f;
 	};
 
 
@@ -42,6 +48,7 @@ public: // サブクラス
 	struct VertexPos
 	{
 		XMFLOAT3 pos; // xyz座標
+		float scele;	//スケール
 	};
 
 	// 定数バッファ用データ構造体
@@ -219,7 +226,7 @@ public: // メンバ関数
 	/// <summary>
 	/// パーティクルの追加
 	/// </summary>
-	void Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOAT3 accel);
+	void Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOAT3 accel, float start_scale, float end_scale);
 
 
 private: // メンバ変数

@@ -60,7 +60,7 @@ void GameScene::Initialize(DirectXCommon* dxCommon, Input* input)
 		const float rnd_acc = 0.001f;
 		acc.y = (float)rand() / RAND_MAX * rnd_acc;
 		// 追加 
-		particleMan->Add(1000, pos, vel, acc);
+		particleMan->Add(1000, pos, vel, acc,1.0f,0.0f);
 	}
 }
 
