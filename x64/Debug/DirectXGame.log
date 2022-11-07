@@ -1,5 +1,1 @@
-﻿  ParticleManager.cpp
-C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\ParticleManager.cpp(726,29): warning C4101: 'matTrans': ローカル変数は 1 度も使われていません。
-Input.obj : warning LNK4204: 'C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\vc143.pdb' に参照するモジュールのデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
-WinApp.obj : warning LNK4204: 'C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\vc143.pdb' に参照するモジュールのデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
-  DirectXGame.vcxproj -> C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\DirectXGame.exe
+﻿  DirectXGame.vcxproj -> C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\DirectXGame.exe
