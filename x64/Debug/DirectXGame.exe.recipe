@@ -7,13 +7,13 @@
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\BasicGeometryShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\ParticleGS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\BasicPixelShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\ParticlePS.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\BasicVertexShader.cso</FullPath>
+      <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\ParticleVS.cso</FullPath>
     </ContentFile>
     <ContentFile>
       <FullPath>C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\SpritePixelShader.cso</FullPath>
