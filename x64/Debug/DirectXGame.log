@@ -1,2 +1,11 @@
-﻿  Object3d.cpp
+﻿  compilation object save succeeded; see C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\BasicGeometryShader.cso
+  DirectXCommon.cpp
+  GameScene.cpp
+  Object3d.cpp
+  main.cpp
+  LINK : 前回のインクリメンタル リンクで C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\DirectXGame.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+DebugText.obj : warning LNK4205: 'C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\vc143.pdb' に参照するモジュールの現在のデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
+Input.obj : warning LNK4204: 'C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\vc143.pdb' に参照するモジュールのデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
+Sprite.obj : warning LNK4205: 'C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\vc143.pdb' に参照するモジュールの現在のデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
+WinApp.obj : warning LNK4204: 'C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\vc143.pdb' に参照するモジュールのデバッグ情報がありません。デバッグ情報を無視してオブジェクトをリンクします。
   DirectXGame.vcxproj -> C:\Users\junju\OneDrive\デスクトップ\CG3\DirectXGame\x64\Debug\DirectXGame.exe
