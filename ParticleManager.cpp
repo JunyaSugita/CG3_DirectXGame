@@ -598,15 +598,21 @@ void ParticleManager::ParticleGenerate()
 		XMFLOAT3 acc{};
 		const float rnd_acc = 0.001f;
 		acc.y = (float)rand() / RAND_MAX * rnd_acc;
-		//色
-		XMFLOAT4 color{};
-		color.x = i / 100;
-		color.y = (100 - i) / 100;
-		color.z = 0.0f;
-		color.w = 1.0f;
+		//最初の色
+		XMFLOAT4 s_color{};
+		s_color.x = 1.0f;
+		s_color.y = 1.0f;
+		s_color.z = 0.0f;
+		s_color.w = 1.0f;
+		//最後の色
+		XMFLOAT4 e_color{};
+		e_color.x = 0.0f;
+		e_color.y = 0.0f;
+		e_color.z = 0.0f;
+		e_color.w = 0.0f;
 
 		// 追加 
-		Add(500, pos, vel, acc, 1.0f, 0.0f, color, { 1,1,1,1 });
+		Add(200, pos, vel, acc, 1.0f, 0.0f, s_color, e_color);
 	}
 }
 
