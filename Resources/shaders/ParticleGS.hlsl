@@ -37,6 +37,8 @@ void main(
 		//ƒrƒ…[AË‰e•ÏŠ·
 		element.svpos = mul(mat, element.svpos);
 		element.uv = uv_array[i];
+		element.color = color;
+
 		output.Append(element);
 	}
 }

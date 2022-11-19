@@ -560,7 +560,7 @@ void ParticleManager::UpdateViewMatrix()
 
 }
 
-void ParticleManager::Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOAT3 accel, float start_scale, float end_scale)
+void ParticleManager::Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOAT3 accel, float start_scale, float end_scale,XMFLOAT4 start_color,XMFLOAT4 end_color)
 {
 	//リストに要素を追加
 	particles.emplace_front();
@@ -574,6 +574,40 @@ void ParticleManager::Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOA
 	p.s_scale = start_scale;
 	p.e_scale = end_scale;
 	p.scale = start_scale;
+	p.s_color = start_color;
+	p.e_color = end_color;
+	p.color = start_color;
+}
+
+void ParticleManager::ParticleGenerate()
+{
+	for (int i = 0; i < 100; i++) {
+		// X,Y,Z全て[-5.0f, +5.0f] でランダムに分布
+		const float rnd_pos = 10.0f;
+		XMFLOAT3 pos{};
+		pos.x = (float)rand() / RAND_MAX * rnd_pos - rnd_pos / 2.0f;
+		pos.y = (float)rand() / RAND_MAX * rnd_pos - rnd_pos / 2.0f;
+		pos.z = (float)rand() / RAND_MAX * rnd_pos - rnd_pos / 2.0f;
+		//X,Y,Z全て [-0.05f,+0.05fでランダムに分布
+		const float rnd_vel = 0.1f;
+		XMFLOAT3 vel{};
+		vel.x = (float)rand() / RAND_MAX * rnd_vel - rnd_vel / 2.0f;
+		vel.y = (float)rand() / RAND_MAX * rnd_vel - rnd_vel / 2.0f;
+		vel.z = (float)rand() / RAND_MAX * rnd_vel - rnd_vel / 2.0f;
+		//重力に見立ててYのみ [-0.001f, 0]でランダムに分布
+		XMFLOAT3 acc{};
+		const float rnd_acc = 0.001f;
+		acc.y = (float)rand() / RAND_MAX * rnd_acc;
+		//色
+		XMFLOAT4 color{};
+		color.x = i / 100;
+		color.y = (100 - i) / 100;
+		color.z = 0.0f;
+		color.w = 1.0f;
+
+		// 追加 
+		Add(500, pos, vel, acc, 1.0f, 0.0f, color, { 1,1,1,1 });
+	}
 }
 
 bool ParticleManager::Initialize()
@@ -619,6 +653,15 @@ void ParticleManager::Update()
 		//スケールの線形補間
 		it->scale = (it->e_scale - it->s_scale) / f;
 		it->scale += it->s_scale;
+		//色の線形補間
+		it->color.x = (it->e_color.x - it->s_color.x) / f;
+		it->color.x += it->s_color.x;
+		it->color.y = (it->e_color.y - it->s_color.y) / f;
+		it->color.y += it->s_color.y;
+		it->color.z = (it->e_color.z - it->s_color.z) / f;
+		it->color.z += it->s_color.z;
+		it->color.w = (it->e_color.w - it->s_color.w) / f;
+		it->color.w += it->s_color.w;
 	}
 
 	//頂点バッファへデータ転送
@@ -642,6 +685,10 @@ void ParticleManager::Update()
 	result = constBuff->Map(0, nullptr, (void**)&constMap);
 	constMap->mat = matView * matProjection;	// 行列の合成
 	constMap->matBillboard = matBillboard;		// 行列の合成
+	for (std::forward_list<Particle>::iterator it = particles.begin(); it != particles.end(); it++) {
+		//色
+		constMap->color = it->color;
+	}
 	constBuff->Unmap(0, nullptr);
 
 	

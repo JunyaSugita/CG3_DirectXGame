@@ -41,27 +41,6 @@ void GameScene::Initialize(DirectXCommon* dxCommon, Input* input)
 	Sprite::LoadTexture(2, L"Resources/texture.png");
 	sprite1 = Sprite::Create(2, { 0,0 });
 	sprite2 = Sprite::Create(2, { 500,500 }, { 1,0,0,1 }, { 0,0 }, false, true);
-
-	for (int i = 0; i < 100; i++) {
-		// X,Y,Z全て[-5.0f, +5.0f] でランダムに分布
-		const float rnd_pos = 10.0f;
-		XMFLOAT3 pos{};
-		pos.x = (float)rand() / RAND_MAX * rnd_pos - rnd_pos / 2.0f;
-		pos.y = (float)rand() / RAND_MAX * rnd_pos - rnd_pos / 2.0f;
-		pos.z = (float)rand() / RAND_MAX * rnd_pos - rnd_pos / 2.0f;
-		//X,Y,Z全て [-0.05f,+0.05fでランダムに分布
-		const float rnd_vel = 0.1f;
-		XMFLOAT3 vel{};
-		vel.x = (float)rand() / RAND_MAX * rnd_vel - rnd_vel / 2.0f;
-		vel.y = (float)rand() / RAND_MAX * rnd_vel - rnd_vel / 2.0f;
-		vel.z = (float)rand() / RAND_MAX * rnd_vel - rnd_vel / 2.0f;
-		//重力に見立ててYのみ [-0.001f, 0]でランダムに分布
-		XMFLOAT3 acc{};
-		const float rnd_acc = 0.001f;
-		acc.y = (float)rand() / RAND_MAX * rnd_acc;
-		// 追加 
-		particleMan->Add(1000, pos, vel, acc,1.0f,0.0f);
-	}
 }
 
 void GameScene::Update()
@@ -83,6 +62,11 @@ void GameScene::Update()
 		position.x += 1.0f;
 		//座標の変更を反映
 		sprite1->SetPosition(position);
+	}
+
+	//
+	if (input->TriggerKey(DIK_P)) {
+		particleMan->ParticleGenerate();
 	}
 
 	particleMan->Update();

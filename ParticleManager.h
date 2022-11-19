@@ -15,6 +15,7 @@ class ParticleManager
 	struct Particle
 	{
 		using XMFLOAT3 = DirectX::XMFLOAT3;
+		using XMFLOAT4 = DirectX::XMFLOAT4;
 		//座標
 		XMFLOAT3 position = {};
 		//速度
@@ -27,10 +28,16 @@ class ParticleManager
 		int num_frame = 0;
 		//スケール
 		float scale = 1.0f;
-		//初期値
+		//初期値(スケール)
 		float s_scale = 1.0f;
-		//最終値
+		//最終値(スケール)
 		float e_scale = 0.0f;
+		//色
+		XMFLOAT4 color = {};
+		//初期値(色)
+		XMFLOAT4 s_color = {};
+		//最終値(色)
+		XMFLOAT4 e_color = {};
 	};
 
 
@@ -56,6 +63,11 @@ public: // サブクラス
 	{
 		XMMATRIX mat;	// ３Ｄ変換行列
 		XMMATRIX matBillboard; //ビルボード行列
+		XMFLOAT4 color;	//色情報
+	};
+
+	struct ConstBufferDataMaterial {
+		
 	};
 
 private: // 定数
@@ -226,8 +238,12 @@ public: // メンバ関数
 	/// <summary>
 	/// パーティクルの追加
 	/// </summary>
-	void Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOAT3 accel, float start_scale, float end_scale);
+	void Add(int life, XMFLOAT3 position, XMFLOAT3 velocity, XMFLOAT3 accel, float start_scale, float end_scale, XMFLOAT4 start_color, XMFLOAT4 end_color);
 
+/// <summary>
+/// パーティクル生成
+/// </summary>
+	void ParticleGenerate();
 
 private: // メンバ変数
 	ComPtr<ID3D12Resource> constBuff; // 定数バッファ
